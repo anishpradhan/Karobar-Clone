@@ -5,7 +5,7 @@ import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 
-import { useColorScheme } from '@/components/useColorScheme';
+// import { useColorScheme } from '@/components/useColorScheme';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -14,7 +14,7 @@ export {
 
 export const unstable_settings = {
   // Ensure that reloading on `/modal` keeps a back button present.
-  initialRouteName: '(tabs)',
+  initialRouteName: '(signin)',
 };
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -45,14 +45,19 @@ export default function RootLayout() {
 }
 
 function RootLayoutNav() {
-  const colorScheme = useColorScheme();
+  // const colorScheme = useColorScheme();
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+    // <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
+        {/* <Stack.Screen name="(tabs)" options={{ headerShown: true }} /> */}
+        <Stack.Screen name="(signin)" options={{ headerShown: false }} />
+        {/* <Stack.Screen name="languageSelection" options={{ headerShown: false }} />
+        <Stack.Screen name="login" options={{ headerShown: false,  gestureEnabled:false }} />
+        <Stack.Screen name="otpVerification" options={{ headerShown: false,  gestureEnabled:false }} />
+        <Stack.Screen name="selectMode" options={{ headerShown: false,  gestureEnabled:false }} /> */}
+        {/* <Stack.Screen name="modal" options={{ presentation: 'modal' }} /> */}
       </Stack>
-    </ThemeProvider>
+    // </ThemeProvider>
   );
 }
