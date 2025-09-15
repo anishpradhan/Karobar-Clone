@@ -15,13 +15,18 @@ function TabBarIcon(props: {
 }) {
   return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
 }
+export const unstable_settings = {
+  // Ensure that reloading on `/modal` keeps a back button present.
+  initialRouteName: 'languageSelection'
+};
 
 export default function TabLayout() {
   // const colorScheme = useColorScheme();
 
-  return (
-    <Stack initialRouteName="languageSelection">
-      <Stack.Screen name="languageSelection" options={{ headerShown: false }} />
+  return <Stack screenOptions={{
+    headerShown: false
+  }}/>
+      {/* <Stack.Screen name="languageSelection" options={{ headerShown: false }} />
       <Stack.Screen
         name="login"
         options={{ headerShown: false, gestureEnabled: false }}
@@ -34,7 +39,7 @@ export default function TabLayout() {
         name="selectMode"
         options={{ headerShown: false, gestureEnabled: false }}
       />
-    </Stack>
+    </Stack> */}
     // <Tabs
     // initialRouteName='languageSelection'
     //   screenOptions={{
@@ -72,5 +77,5 @@ export default function TabLayout() {
     //     }}
     //   />
     // </Tabs>
-  );
+  // );
 }

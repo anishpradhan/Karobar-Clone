@@ -14,7 +14,7 @@ export {
 
 export const unstable_settings = {
   // Ensure that reloading on `/modal` keeps a back button present.
-  initialRouteName: '(signin)',
+  initialRouteName: '(signin)'
 };
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -47,17 +47,19 @@ export default function RootLayout() {
 function RootLayoutNav() {
   // const colorScheme = useColorScheme();
 
-  return (
+  return <Stack initialRouteName='(signin)' screenOptions={{
+    headerShown: false,
+    gestureEnabled: false
+  }}/>
     // <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
         {/* <Stack.Screen name="(tabs)" options={{ headerShown: true }} /> */}
-        <Stack.Screen name="(signin)" options={{ headerShown: false }} />
+        {/* <Stack.Screen name="(signin)" options={{ headerShown: false }} /> */}
         {/* <Stack.Screen name="languageSelection" options={{ headerShown: false }} />
         <Stack.Screen name="login" options={{ headerShown: false,  gestureEnabled:false }} />
         <Stack.Screen name="otpVerification" options={{ headerShown: false,  gestureEnabled:false }} />
         <Stack.Screen name="selectMode" options={{ headerShown: false,  gestureEnabled:false }} /> */}
         {/* <Stack.Screen name="modal" options={{ presentation: 'modal' }} /> */}
-      </Stack>
+    //  </Stack>
     // </ThemeProvider>
-  );
+  
 }

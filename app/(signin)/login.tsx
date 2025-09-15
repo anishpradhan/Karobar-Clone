@@ -141,7 +141,7 @@ import {
                   <Button
                     Title={"Get Login OTP"}
                     // navigation={navigation}
-                    navigateTo={phone.length === 10 ? "/signin/otpVerification" : ''}
+                    navigateTo={phone.length === 10 ? "/(signin)/otpVerification" : ''}
                   />
                 </View>
               </View>

@@ -72,7 +72,7 @@ import {
           <Button
             Title={"Continue"}
             // navigation={navigation}
-            navigateTo={"/signin/login"}
+            navigateTo={"/dashboard"}
           />
           <Text className="mt-2 text-center text-xs font-light">You can change Karobar Mode from settings</Text>
           </View>

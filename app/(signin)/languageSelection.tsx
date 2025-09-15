@@ -88,7 +88,7 @@ export default function LanguageSelectionScreen() {
         <Button
           Title={"Continue"}
           // navigation={navigation}
-          navigateTo={"/signin/login"}
+          navigateTo={"/(signin)/login"}
         />
       </View>
 

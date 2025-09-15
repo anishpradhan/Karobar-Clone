@@ -102,7 +102,7 @@ export default function OTPVerificationScreen() {
           <Button
             Title={"Verify Phone Number"}
             // navigation={navigation}
-            navigateTo={otp.length === 6 && "/signin/selectMode"}
+            navigateTo={otp.length === 6 && "/(signin)/selectMode"}
           ></Button>
         </View>
       </View>
